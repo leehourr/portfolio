@@ -16,7 +16,7 @@ const FONT_WEIGHTS = {
 };
 
 const setupTextHover = (container, type) => {
-    if (!container) return;
+    if (!container) return () => { };
 
     const letters = container.querySelectorAll('span');
     const { min, max, default: base } = FONT_WEIGHTS[type];
@@ -78,7 +78,7 @@ export default function Welcome() {
 
             <div className='small-scree'>
                 <p>
-                    This portfolio designs for desktop/tabled screens only.
+                    This portfolio designs for desktop/tablet screens only.
                 </p>
             </div>
         </section>
