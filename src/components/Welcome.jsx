@@ -71,14 +71,14 @@ export default function Welcome() {
 
     return (
         <section id='welcome'>
-            <p ref={subtitleRef}>{renderText("Hey, I'm Lee Hour! Welcome to my",
+            <p ref={subtitleRef}>{renderText("I'm Lee Hour! Welcome to my",
                 "text-3xl font-georama",
                 300)}</p>
-            <h1 ref={titleRef} className='mt-7'>{renderText("portfolio", "text-9xl italic font-georama")}</h1>
+            <h1 ref={titleRef} className='mt-7'>{renderText("portfolio.", "text-9xl italic font-georama")}</h1>
 
             <div className='small-screen'>
                 <p>
-                    This portfolio designs for desktop/tablet screens only.
+                  best viewed on a desktop or tablet.
                 </p>
             </div>
         </section>
