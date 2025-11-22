@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from '../assets/images/logo.svg'
+import logo from '/images/logo.svg'
 import { navIcons, navLinks } from '../constants'
 import dayjs from 'dayjs'
 
