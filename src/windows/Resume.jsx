@@ -3,7 +3,7 @@ import WindowWrapper from "../hoc/WindowWrapper";
 import { WindowControls } from "../components";
 import { Download } from "lucide-react";
 import { Page, pdfjs, Document } from "react-pdf";
-import resume from "../files/Full Stack Resume - Leang Lyhour.pdf";
+import resume from "../files/Full Stack Developer Resume - Leang Lyhour.pdf";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import "react-pdf/dist/Page/TextLayer.css";
 pdfjs.GlobalWorkerOptions.workerSrc = new URL(

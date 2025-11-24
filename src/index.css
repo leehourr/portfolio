@@ -37,7 +37,7 @@ body {
   }
 
   nav {
-    @apply flex justify-between items-center bg-white/50 backdrop-blur-3xl p-2 px-5 select-none;
+    @apply flex justify-between items-center bg-[#1d1d1d]/50 backdrop-blur-3xl p-2 px-5 select-none text-[#DBDBDB];
 
     div {
       @apply flex items-center max-sm:w-full max-sm:justify-center gap-5;
@@ -56,7 +56,7 @@ body {
     }
 
     time {
-      @apply text-sm font-medium text-black;
+      @apply text-sm font-medium text-white;
     }
   }
 }
@@ -67,7 +67,15 @@ body {
   }
 
   #welcome {
-    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-10;
+    @apply text-gray-200 flex flex-col justify-center items-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none max-sm:h-screen max-sm:w-full max-sm:px-5;
+
+    p {
+      @apply max-sm:text-xl text-center;
+    }
+
+    h1 {
+      @apply max-sm:text-6xl text-center;
+    }
 
     .small-screen {
       @apply sm:hidden m-7 bg-red-300/20 backdrop-blur-lg p-3 rounded-md absolute top-10;
@@ -79,10 +87,10 @@ body {
   }
 
   #dock {
-    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none max-sm:hidden;
+    @apply absolute bottom-5 left-1/2 -translate-x-1/2 z-50 select-none;
 
     .dock-container {
-      @apply bg-white/20 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5;
+      @apply bg-[#2C2B29]/50 backdrop-blur-md justify-between rounded-2xl p-1.5 flex items-end gap-1.5 max-sm:gap-1 max-sm:p-1;
     }
 
     .tooltip {
@@ -90,7 +98,7 @@ body {
     }
 
     .dock-icon {
-      @apply size-14 3xl:size-20 cursor-pointer;
+      @apply size-14 3xl:size-20 cursor-pointer max-sm:size-10;
 
       img {
         @apply object-cover object-center;
@@ -115,22 +123,22 @@ body {
   }
 
   #window-header {
-    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-gray-50 border-b border-gray-200 select-none text-sm text-gray-400;
+    @apply flex items-center justify-between px-4 py-3 rounded-t-lg bg-[#464645] border-b border-[#5D5D5C] select-none text-sm text-[#E9E9E9];
   }
 
   #safari {
-    @apply w-4xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-4xl absolute top-40 left-2/12 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20;
 
     .search {
-      @apply flex items-center gap-3 w-2/3 bg-white border border-gray-300 rounded-lg px-3 py-2;
+      @apply flex items-center gap-3 w-2/3 bg-[#464645] border border-[#5D5D5C] rounded-lg px-3 py-2;
 
       input {
-        @apply placeholder:text-gray-400;
+        @apply placeholder:text-[#9CA3AF] text-[#E9E9E9];
       }
     }
 
     .blog {
-      @apply bg-white p-10 max-w-3xl mx-auto;
+      @apply bg-[#2C2B29] p-10 max-w-3xl mx-auto;
 
       h2 {
         @apply text-xl font-bold text-pink-600 mb-10;
@@ -147,11 +155,11 @@ body {
           @apply col-span-10 space-y-3;
 
           p {
-            @apply text-xs text-gray-500;
+            @apply text-xs text-[#C4C4C4];
           }
 
           h3 {
-            @apply font-semibold text-base text-gray-800;
+            @apply font-semibold text-base text-[#C4C4C4];
           }
 
           a {
@@ -163,17 +171,21 @@ body {
   }
 
   #terminal {
-    @apply w-xl absolute top-32 left-1/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-32 left-1/12 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
 
     .techstack {
-      @apply text-sm font-roboto p-5;
+      @apply text-sm font-roboto p-5 text-[#DBDBDB] max-sm:text-xs;
 
       .label {
-        @apply flex items-center ms-10 mt-7;
+        @apply flex items-center ms-10 mt-7 max-sm:ms-7;
+
+        p:first-child {
+          @apply w-32 max-sm:w-20;
+        }
       }
 
       .content {
@@ -185,11 +197,11 @@ body {
           }
 
           h3 {
-            @apply font-semibold text-[#00A154] w-32 ms-5;
+            @apply font-semibold text-[#00A154] w-32 ms-5 max-sm:w-20 max-sm:ms-2;
           }
 
           ul {
-            @apply flex items-center gap-3;
+            @apply flex items-center gap-3 flex-wrap flex-1;
           }
         }
       }
@@ -209,21 +221,25 @@ body {
   }
 
   #contact {
-    @apply max-w-2xl absolute top-60 left-5/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-2xl absolute top-60 left-5/12 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
     }
 
     h3 {
-      @apply text-xl font-semibold;
+      @apply text-xl font-semibold text-[#E9E9E9];
+    }
+
+    p {
+      @apply text-[#DBDBDB];
     }
 
     ul {
-      @apply flex items-center gap-3;
+      @apply flex items-center gap-3 max-sm:grid max-sm:grid-cols-2;
 
       li {
-        @apply rounded-lg p-3 w-60 hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300;
+        @apply rounded-lg p-3 w-60 hover:-translate-y-0.5 hover:scale-105 origin-center transition-all duration-300 max-sm:w-auto;
 
         a {
           @apply space-y-5;
@@ -237,18 +253,18 @@ body {
   }
 
   #photos {
-    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply max-w-3xl absolute top-96 left-1/2 -translate-y-1/2 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:top-1/2;
 
     .sidebar {
-      @apply w-3/12 flex-none bg-gray-50 border-r border-gray-200 flex flex-col p-5;
+      @apply w-3/12 flex-none bg-[#464645] border-r border-[#5D5D5C] flex flex-col p-5;
 
       h2 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+        @apply text-xs font-medium text-[#DBDBDB] mb-1;
       }
 
       ul {
         li {
-          @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors;
+          @apply flex space-y-1 items-center gap-2 px-3 py-2 rounded-md cursor-pointer transition-colors text-[#DBDBDB];
 
           &:first-child {
             @apply bg-blue-100 text-blue-700;
@@ -297,7 +313,7 @@ body {
   }
 
   #resume {
-    @apply w-fit h-fit absolute top-16 left-7/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-fit h-fit absolute top-16 left-7/12 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20;
 
     #window-header {
       h2 {
@@ -307,24 +323,30 @@ body {
   }
 
   #finder {
-    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl;
+    @apply absolute w-3xl left-40 top-20 shadow-2xl drop-shadow-2xl overflow-hidden rounded-xl h-[30rem] max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20 max-sm:h-[60vh];
 
     .sidebar {
-      @apply w-48 bg-gray-50 border-r border-gray-200 flex flex-col p-5 space-y-3;
+      @apply w-48 bg-[#464645] border-r border-[#42413F] flex flex-col p-5 space-y-3 overflow-y-auto;
 
       h3 {
-        @apply text-xs font-medium text-gray-400 mb-1;
+        @apply text-xs font-medium text-[#DBDBDB] mb-1;
       }
 
       ul {
         @apply space-y-1;
 
         .active {
-          @apply bg-blue-100 text-blue-700;
+          @apply bg-[#558ADF] text-[#DBDBDB];
         }
 
+        .active-icon {
+          @apply text-[#DBDBDB];
+        }
+
+        /* #DBDBDB */
+        /* text-gray-700 */
         .not-active {
-          @apply text-gray-700 hover:bg-gray-200;
+          @apply text-[#DBDBDB] hover:bg-gray-200 hover:text-gray-700;
         }
 
         li {
@@ -334,24 +356,24 @@ body {
     }
 
     .content {
-      @apply flex-1 p-8 bg-white max-w-2xl relative;
+      @apply flex-1 p-8 bg-[#2C2B29] max-w-2xl relative max-sm:grid max-sm:grid-cols-3 max-sm:gap-4 max-sm:overflow-y-auto;
 
       li {
-        @apply absolute flex items-center flex-col gap-3;
+        @apply absolute flex items-center flex-col gap-3 max-sm:static max-sm:translate-x-0 max-sm:translate-y-0;
 
         img {
           @apply object-contain object-center size-16 relative group-hover:scale-105;
         }
 
         p {
-          @apply text-sm text-center font-medium w-40;
+          @apply text-sm text-center font-medium w-40 text-[#DBDBDB] max-sm:w-auto max-sm:text-xs;
         }
       }
     }
   }
 
   #txtfile {
-    @apply w-md absolute top-36 right-32 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-md absolute top-36 right-32 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20;
 
     h2 {
       @apply font-bold text-sm text-center w-full;
@@ -359,16 +381,16 @@ body {
   }
 
   #imgfile {
-    @apply w-xl absolute top-40 left-2/12 bg-white shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden;
+    @apply w-xl absolute top-40 left-2/12 bg-[#2C2B29] shadow-2xl drop-shadow-2xl rounded-xl overflow-hidden max-sm:w-[95%] max-sm:left-1/2 max-sm:-translate-x-1/2 max-sm:top-20;
 
     #window-header {
       p {
-        @apply font-bold text-[#5f6266];
+        @apply font-bold text-[#E9E9E9];
       }
     }
 
     .preview {
-      @apply p-2 bg-gray-200 max-h-[70vh];
+      @apply p-2 bg-[#1E1E1E] max-h-[70vh];
 
       img {
         @apply w-full h-fit object-contain object-center;
@@ -377,7 +399,7 @@ body {
   }
 
   #home {
-    @apply relative z-0 max-sm:hidden;
+    @apply relative z-0;
 
     ul {
       li {

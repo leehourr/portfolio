@@ -15,7 +15,7 @@ const renderText = (text, className, baseWeight = 400) => {
 };
 
 const FONT_WEIGHTS = {
-  subtitle: { min: 400, max: 600, default: 400 },
+  subtitle: { min: 500, max: 900, default: 500 },
   title: { min: 400, max: 900, default: 400 },
 };
 
@@ -75,11 +75,18 @@ export default function Welcome() {
 
   return (
     <section id="welcome">
-      <p ref={subtitleRef} className="font-medium">
-        {renderText("I'm Lee Hour! Welcome to my", "text-3xl")}
+      <p ref={subtitleRef} className="flex flex-wrap justify-center">
+        {renderText(
+          "I'm Lee Hour. Welcome to my",
+          "text-3xl font-georama max-sm:text-xl",
+          400
+        )}
       </p>
-      <h1 ref={titleRef} className="mt-7">
-        {renderText("portfolio.", "text-9xl italic font-georama")}
+      <h1 ref={titleRef} className="mt-7 flex flex-wrap justify-center">
+        {renderText(
+          "portfolio.",
+          "text-9xl italic font-georama max-sm:text-6xl"
+        )}
       </h1>
 
       <div className="small-screen">

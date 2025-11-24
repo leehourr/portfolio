@@ -86,13 +86,19 @@ export default function Dock() {
                         <div key={id} className='relative flex justify-center'>
                             <button
                                 type='button'
-                                className='dock-icon'
+                                className={'dock-icon text-center'}
                                 aria-label={name}
                                 data-tooltip-id="dock-tooltip"
                                 data-tooltip-content={name}
                                 data-tooltip-delay-show={150}
                                 disabled={!canOpen}
-                                onClick={() => toggleApp({ id, canOpen })}
+                                onClick={() => {
+                                    if (id === "github") {
+                                        window.open("https://github.com/leehourr", "_blank");
+                                        return
+                                    }
+                                    toggleApp({ id, canOpen })
+                                }}
 
                             >
                                 <img
@@ -100,7 +106,7 @@ export default function Dock() {
                                     // src='./assets/images/safari.png'
                                     alt={name}
                                     loading='lazy'
-                                    className={canOpen ? '' : 'opacity-60'}
+                                    className={`${canOpen ? '' : 'opacity-60'} mx-auto`}
                                 />
                             </button>
                         </div>
