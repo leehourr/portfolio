@@ -41,7 +41,7 @@ const Terminal = () => {
 
         <div className="footnote">
           <p>
-            <Check size={20} /> 5 of 5 stacks loaded succesfully (100%)
+            <Check size={20} /> 6 of 6 stacks loaded succesfully (100%)
           </p>
           <p className="text-[#DBDBDB]">
             <Flag size={20} fill="#DBDBDB" /> Render time 6ms.
