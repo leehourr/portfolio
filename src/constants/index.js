@@ -92,7 +92,7 @@ const techStack = [
   },
   {
     category: "Dev Tools",
-    items: ["Git", "GitHub", "Docker"],
+    items: ["Git", "GitHub", "GitLab", "Docker"],
   },
 ];
 
