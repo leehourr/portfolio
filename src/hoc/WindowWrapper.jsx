@@ -41,6 +41,7 @@ export default function WindowWrapper(Component, windowKey) {
             return true;
           if (element.getAttribute("data-clickable") === "true") return true;
           if (element.closest("[data-clickable='true']")) return true;
+          if (element.closest("a, button, label")) return true;
           return false;
         },
         onPress: () => focusWindow(windowKey),
