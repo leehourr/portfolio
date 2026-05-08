@@ -71,24 +71,20 @@ const dockApps = [
 
 const techStack = [
   {
+    category: "Cloud & Security",
+    items: ["AWS Security", "Trend Micro Vision One / SWP", "CIS Benchmarks", "NIST 800-53", "OWASP"],
+  },
+  {
+    category: "AI Tooling",
+    items: ["Claude Code", "AI-assisted security research", "RAG workflows"],
+  },
+  {
     category: "Frontend",
-    items: ["React.js", "Next.js", "TypeScript"],
+    items: ["React.js", "Next.js", "React Native", "Tailwind CSS", "Nativewind", "TypeScript", "JavaScript"],
   },
   {
-    category: "Mobile",
-    items: ["React Native", "Expo"],
-  },
-  {
-    category: "Styling",
-    items: ["Tailwind CSS", "Sass", "CSS"],
-  },
-  {
-    category: "Backend",
-    items: ["Laravel", "Node.js", "Express", "NestJS"],
-  },
-  {
-    category: "Database",
-    items: ["MySql", "Sql Server", "MongoDB", "Redis"],
+    category: "Backend & Databases",
+    items: ["PHP Laravel", "Node.js", "Express", "NestJS", "MySQL", "SQL Server", "MongoDB", "Redis", "RESTful APIs"],
   },
   {
     category: "Dev Tools",
@@ -431,7 +427,7 @@ const RESUME_LOCATION = {
   children: [
     {
       id: 1,
-      name: "Full Stack Developer Resume - Leang Lyhour.pdf",
+      name: "Cloud Security Engineer Resume - Leang Lyhour.pdf",
       icon: "/images/pdf.png",
       kind: "file",
       fileType: "pdf",
