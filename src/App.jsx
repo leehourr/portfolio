@@ -27,6 +27,37 @@ function App() {
       <Image />
       <Contact />
       <Home />
+
+      <div
+        style={{
+          position: "fixed",
+          bottom: "52px",
+          right: "12px",
+          fontSize: "10px",
+          color: "rgba(255,255,255,0.35)",
+          zIndex: 1,
+          pointerEvents: "auto",
+        }}
+      >
+        Wallpaper art by{" "}
+        <a
+          href="https://www.tumblr.com/waneella"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
+        >
+          Waneella
+        </a>
+        {" / "}
+        <a
+          href="https://www.tumblr.com/1041uuu"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "rgba(255,255,255,0.5)", textDecoration: "none" }}
+        >
+          1041uuu
+        </a>
+      </div>
     </main>
   );
 }
